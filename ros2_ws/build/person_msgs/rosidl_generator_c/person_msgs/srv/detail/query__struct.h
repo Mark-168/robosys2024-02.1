@@ -21,7 +21,6 @@ extern "C"
 typedef struct person_msgs__srv__Query_Request
 {
   uint8_t light;
-  uint8_t value;
 } person_msgs__srv__Query_Request;
 
 // Struct for a sequence of person_msgs__srv__Query_Request.
@@ -41,7 +40,6 @@ typedef struct person_msgs__srv__Query_Request__Sequence
 typedef struct person_msgs__srv__Query_Response
 {
   uint8_t color;
-  uint8_t total;
 } person_msgs__srv__Query_Response;
 
 // Struct for a sequence of person_msgs__srv__Query_Response.

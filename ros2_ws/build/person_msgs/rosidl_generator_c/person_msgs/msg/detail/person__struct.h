@@ -21,9 +21,7 @@ extern "C"
 typedef struct person_msgs__msg__Person
 {
   uint8_t light;
-  uint8_t value;
   uint8_t color;
-  uint8_t total;
 } person_msgs__msg__Person;
 
 // Struct for a sequence of person_msgs__msg__Person.

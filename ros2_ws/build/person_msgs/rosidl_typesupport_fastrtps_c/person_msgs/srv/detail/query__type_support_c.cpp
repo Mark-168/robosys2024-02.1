@@ -54,11 +54,6 @@ static bool _Query_Request__cdr_serialize(
     cdr << ros_message->light;
   }
 
-  // Field name: value
-  {
-    cdr << ros_message->value;
-  }
-
   return true;
 }
 
@@ -74,11 +69,6 @@ static bool _Query_Request__cdr_deserialize(
   // Field name: light
   {
     cdr >> ros_message->light;
-  }
-
-  // Field name: value
-  {
-    cdr >> ros_message->value;
   }
 
   return true;
@@ -101,12 +91,6 @@ size_t get_serialized_size_person_msgs__srv__Query_Request(
   // field.name light
   {
     size_t item_size = sizeof(ros_message->light);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name value
-  {
-    size_t item_size = sizeof(ros_message->value);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -135,12 +119,6 @@ size_t max_serialized_size_person_msgs__srv__Query_Request(
   (void)full_bounded;
 
   // member: light
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // member: value
   {
     size_t array_size = 1;
 
@@ -241,11 +219,6 @@ static bool _Query_Response__cdr_serialize(
     cdr << ros_message->color;
   }
 
-  // Field name: total
-  {
-    cdr << ros_message->total;
-  }
-
   return true;
 }
 
@@ -261,11 +234,6 @@ static bool _Query_Response__cdr_deserialize(
   // Field name: color
   {
     cdr >> ros_message->color;
-  }
-
-  // Field name: total
-  {
-    cdr >> ros_message->total;
   }
 
   return true;
@@ -288,12 +256,6 @@ size_t get_serialized_size_person_msgs__srv__Query_Response(
   // field.name color
   {
     size_t item_size = sizeof(ros_message->color);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name total
-  {
-    size_t item_size = sizeof(ros_message->total);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -322,12 +284,6 @@ size_t max_serialized_size_person_msgs__srv__Query_Response(
   (void)full_bounded;
 
   // member: color
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // member: total
   {
     size_t array_size = 1;
 

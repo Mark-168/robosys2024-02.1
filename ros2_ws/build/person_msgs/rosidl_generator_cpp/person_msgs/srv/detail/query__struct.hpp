@@ -38,7 +38,6 @@ struct Query_Request_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->light = 0;
-      this->value = 0;
     }
   }
 
@@ -49,7 +48,6 @@ struct Query_Request_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->light = 0;
-      this->value = 0;
     }
   }
 
@@ -57,21 +55,12 @@ struct Query_Request_
   using _light_type =
     uint8_t;
   _light_type light;
-  using _value_type =
-    uint8_t;
-  _value_type value;
 
   // setters for named parameter idiom
   Type & set__light(
     const uint8_t & _arg)
   {
     this->light = _arg;
-    return *this;
-  }
-  Type & set__value(
-    const uint8_t & _arg)
-  {
-    this->value = _arg;
     return *this;
   }
 
@@ -120,9 +109,6 @@ struct Query_Request_
     if (this->light != other.light) {
       return false;
     }
-    if (this->value != other.value) {
-      return false;
-    }
     return true;
   }
   bool operator!=(const Query_Request_ & other) const
@@ -166,7 +152,6 @@ struct Query_Response_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->color = 0;
-      this->total = 0;
     }
   }
 
@@ -177,7 +162,6 @@ struct Query_Response_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->color = 0;
-      this->total = 0;
     }
   }
 
@@ -185,21 +169,12 @@ struct Query_Response_
   using _color_type =
     uint8_t;
   _color_type color;
-  using _total_type =
-    uint8_t;
-  _total_type total;
 
   // setters for named parameter idiom
   Type & set__color(
     const uint8_t & _arg)
   {
     this->color = _arg;
-    return *this;
-  }
-  Type & set__total(
-    const uint8_t & _arg)
-  {
-    this->total = _arg;
     return *this;
   }
 
@@ -246,9 +221,6 @@ struct Query_Response_
   bool operator==(const Query_Response_ & other) const
   {
     if (this->color != other.color) {
-      return false;
-    }
-    if (this->total != other.total) {
       return false;
     }
     return true;

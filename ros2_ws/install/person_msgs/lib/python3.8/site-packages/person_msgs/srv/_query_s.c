@@ -59,15 +59,6 @@ bool person_msgs__srv__query__request__convert_from_py(PyObject * _pymsg, void *
     ros_message->light = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
-  {  // value
-    PyObject * field = PyObject_GetAttrString(_pymsg, "value");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->value = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -95,17 +86,6 @@ PyObject * person_msgs__srv__query__request__convert_to_py(void * raw_ros_messag
     field = PyLong_FromUnsignedLong(ros_message->light);
     {
       int rc = PyObject_SetAttrString(_pymessage, "light", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // value
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->value);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "value", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -174,15 +154,6 @@ bool person_msgs__srv__query__response__convert_from_py(PyObject * _pymsg, void 
     ros_message->color = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
-  {  // total
-    PyObject * field = PyObject_GetAttrString(_pymsg, "total");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->total = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -210,17 +181,6 @@ PyObject * person_msgs__srv__query__response__convert_to_py(void * raw_ros_messa
     field = PyLong_FromUnsignedLong(ros_message->color);
     {
       int rc = PyObject_SetAttrString(_pymessage, "color", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // total
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->total);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "total", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

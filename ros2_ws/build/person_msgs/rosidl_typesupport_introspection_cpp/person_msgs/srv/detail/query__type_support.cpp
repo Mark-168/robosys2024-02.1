@@ -37,7 +37,7 @@ void Query_Request_fini_function(void * message_memory)
   typed_message->~Query_Request();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Query_Request_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Query_Request_message_member_array[1] = {
   {
     "light",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
@@ -52,28 +52,13 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Query_Request
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
-  },
-  {
-    "value",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(person_msgs::srv::Query_Request, value),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Query_Request_message_members = {
   "person_msgs::srv",  // message namespace
   "Query_Request",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(person_msgs::srv::Query_Request),
   Query_Request_message_member_array,  // message members
   Query_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -169,7 +154,7 @@ void Query_Response_fini_function(void * message_memory)
   typed_message->~Query_Response();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Query_Response_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Query_Response_message_member_array[1] = {
   {
     "color",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
@@ -184,28 +169,13 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Query_Respons
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
-  },
-  {
-    "total",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(person_msgs::srv::Query_Response, total),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Query_Response_message_members = {
   "person_msgs::srv",  // message namespace
   "Query_Response",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(person_msgs::srv::Query_Response),
   Query_Response_message_member_array,  // message members
   Query_Response_init_function,  // function to initialize message memory (memory has to be allocated)

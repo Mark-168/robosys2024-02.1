@@ -54,21 +54,15 @@ class Person(metaclass=Metaclass_Person):
 
     __slots__ = [
         '_light',
-        '_value',
         '_color',
-        '_total',
     ]
 
     _fields_and_field_types = {
         'light': 'uint8',
-        'value': 'uint8',
         'color': 'uint8',
-        'total': 'uint8',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
-        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
     )
@@ -78,9 +72,7 @@ class Person(metaclass=Metaclass_Person):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.light = kwargs.get('light', int())
-        self.value = kwargs.get('value', int())
         self.color = kwargs.get('color', int())
-        self.total = kwargs.get('total', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -113,11 +105,7 @@ class Person(metaclass=Metaclass_Person):
             return False
         if self.light != other.light:
             return False
-        if self.value != other.value:
-            return False
         if self.color != other.color:
-            return False
-        if self.total != other.total:
             return False
         return True
 
@@ -142,21 +130,6 @@ class Person(metaclass=Metaclass_Person):
         self._light = value
 
     @property
-    def value(self):
-        """Message field 'value'."""
-        return self._value
-
-    @value.setter
-    def value(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, int), \
-                "The 'value' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'value' field must be an unsigned integer in [0, 255]"
-        self._value = value
-
-    @property
     def color(self):
         """Message field 'color'."""
         return self._color
@@ -170,18 +143,3 @@ class Person(metaclass=Metaclass_Person):
             assert value >= 0 and value < 256, \
                 "The 'color' field must be an unsigned integer in [0, 255]"
         self._color = value
-
-    @property
-    def total(self):
-        """Message field 'total'."""
-        return self._total
-
-    @total.setter
-    def total(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, int), \
-                "The 'total' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'total' field must be an unsigned integer in [0, 255]"
-        self._total = value

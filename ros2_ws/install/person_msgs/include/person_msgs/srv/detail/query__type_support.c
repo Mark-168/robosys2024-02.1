@@ -31,7 +31,7 @@ void Query_Request__rosidl_typesupport_introspection_c__Query_Request_fini_funct
   person_msgs__srv__Query_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember Query_Request__rosidl_typesupport_introspection_c__Query_Request_message_member_array[2] = {
+static rosidl_typesupport_introspection_c__MessageMember Query_Request__rosidl_typesupport_introspection_c__Query_Request_message_member_array[1] = {
   {
     "light",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
@@ -46,28 +46,13 @@ static rosidl_typesupport_introspection_c__MessageMember Query_Request__rosidl_t
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
-  },
-  {
-    "value",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(person_msgs__srv__Query_Request, value),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers Query_Request__rosidl_typesupport_introspection_c__Query_Request_message_members = {
   "person_msgs__srv",  // message namespace
   "Query_Request",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(person_msgs__srv__Query_Request),
   Query_Request__rosidl_typesupport_introspection_c__Query_Request_message_member_array,  // message members
   Query_Request__rosidl_typesupport_introspection_c__Query_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -132,7 +117,7 @@ void Query_Response__rosidl_typesupport_introspection_c__Query_Response_fini_fun
   person_msgs__srv__Query_Response__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember Query_Response__rosidl_typesupport_introspection_c__Query_Response_message_member_array[2] = {
+static rosidl_typesupport_introspection_c__MessageMember Query_Response__rosidl_typesupport_introspection_c__Query_Response_message_member_array[1] = {
   {
     "color",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
@@ -147,28 +132,13 @@ static rosidl_typesupport_introspection_c__MessageMember Query_Response__rosidl_
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
-  },
-  {
-    "total",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(person_msgs__srv__Query_Response, total),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers Query_Response__rosidl_typesupport_introspection_c__Query_Response_message_members = {
   "person_msgs__srv",  // message namespace
   "Query_Response",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(person_msgs__srv__Query_Response),
   Query_Response__rosidl_typesupport_introspection_c__Query_Response_message_member_array,  // message members
   Query_Response__rosidl_typesupport_introspection_c__Query_Response_init_function,  // function to initialize message memory (memory has to be allocated)

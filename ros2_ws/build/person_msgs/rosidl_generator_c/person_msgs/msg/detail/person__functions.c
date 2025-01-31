@@ -18,9 +18,7 @@ person_msgs__msg__Person__init(person_msgs__msg__Person * msg)
     return false;
   }
   // light
-  // value
   // color
-  // total
   return true;
 }
 
@@ -31,9 +29,7 @@ person_msgs__msg__Person__fini(person_msgs__msg__Person * msg)
     return;
   }
   // light
-  // value
   // color
-  // total
 }
 
 bool
@@ -46,16 +42,8 @@ person_msgs__msg__Person__are_equal(const person_msgs__msg__Person * lhs, const 
   if (lhs->light != rhs->light) {
     return false;
   }
-  // value
-  if (lhs->value != rhs->value) {
-    return false;
-  }
   // color
   if (lhs->color != rhs->color) {
-    return false;
-  }
-  // total
-  if (lhs->total != rhs->total) {
     return false;
   }
   return true;
@@ -71,12 +59,8 @@ person_msgs__msg__Person__copy(
   }
   // light
   output->light = input->light;
-  // value
-  output->value = input->value;
   // color
   output->color = input->color;
-  // total
-  output->total = input->total;
   return true;
 }
 

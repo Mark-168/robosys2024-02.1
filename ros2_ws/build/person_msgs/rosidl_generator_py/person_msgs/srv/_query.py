@@ -54,16 +54,13 @@ class Query_Request(metaclass=Metaclass_Query_Request):
 
     __slots__ = [
         '_light',
-        '_value',
     ]
 
     _fields_and_field_types = {
         'light': 'uint8',
-        'value': 'uint8',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
     )
 
@@ -72,7 +69,6 @@ class Query_Request(metaclass=Metaclass_Query_Request):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.light = kwargs.get('light', int())
-        self.value = kwargs.get('value', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -105,8 +101,6 @@ class Query_Request(metaclass=Metaclass_Query_Request):
             return False
         if self.light != other.light:
             return False
-        if self.value != other.value:
-            return False
         return True
 
     @classmethod
@@ -128,21 +122,6 @@ class Query_Request(metaclass=Metaclass_Query_Request):
             assert value >= 0 and value < 256, \
                 "The 'light' field must be an unsigned integer in [0, 255]"
         self._light = value
-
-    @property
-    def value(self):
-        """Message field 'value'."""
-        return self._value
-
-    @value.setter
-    def value(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, int), \
-                "The 'value' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'value' field must be an unsigned integer in [0, 255]"
-        self._value = value
 
 
 # Import statements for member types
@@ -197,16 +176,13 @@ class Query_Response(metaclass=Metaclass_Query_Response):
 
     __slots__ = [
         '_color',
-        '_total',
     ]
 
     _fields_and_field_types = {
         'color': 'uint8',
-        'total': 'uint8',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
     )
 
@@ -215,7 +191,6 @@ class Query_Response(metaclass=Metaclass_Query_Response):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.color = kwargs.get('color', int())
-        self.total = kwargs.get('total', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -248,8 +223,6 @@ class Query_Response(metaclass=Metaclass_Query_Response):
             return False
         if self.color != other.color:
             return False
-        if self.total != other.total:
-            return False
         return True
 
     @classmethod
@@ -271,21 +244,6 @@ class Query_Response(metaclass=Metaclass_Query_Response):
             assert value >= 0 and value < 256, \
                 "The 'color' field must be an unsigned integer in [0, 255]"
         self._color = value
-
-    @property
-    def total(self):
-        """Message field 'total'."""
-        return self._total
-
-    @total.setter
-    def total(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, int), \
-                "The 'total' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'total' field must be an unsigned integer in [0, 255]"
-        self._total = value
 
 
 class Metaclass_Query(type):

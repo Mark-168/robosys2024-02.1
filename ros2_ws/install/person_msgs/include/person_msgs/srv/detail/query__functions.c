@@ -17,7 +17,6 @@ person_msgs__srv__Query_Request__init(person_msgs__srv__Query_Request * msg)
     return false;
   }
   // light
-  // value
   return true;
 }
 
@@ -28,7 +27,6 @@ person_msgs__srv__Query_Request__fini(person_msgs__srv__Query_Request * msg)
     return;
   }
   // light
-  // value
 }
 
 bool
@@ -39,10 +37,6 @@ person_msgs__srv__Query_Request__are_equal(const person_msgs__srv__Query_Request
   }
   // light
   if (lhs->light != rhs->light) {
-    return false;
-  }
-  // value
-  if (lhs->value != rhs->value) {
     return false;
   }
   return true;
@@ -58,8 +52,6 @@ person_msgs__srv__Query_Request__copy(
   }
   // light
   output->light = input->light;
-  // value
-  output->value = input->value;
   return true;
 }
 
@@ -245,7 +237,6 @@ person_msgs__srv__Query_Response__init(person_msgs__srv__Query_Response * msg)
     return false;
   }
   // color
-  // total
   return true;
 }
 
@@ -256,7 +247,6 @@ person_msgs__srv__Query_Response__fini(person_msgs__srv__Query_Response * msg)
     return;
   }
   // color
-  // total
 }
 
 bool
@@ -267,10 +257,6 @@ person_msgs__srv__Query_Response__are_equal(const person_msgs__srv__Query_Respon
   }
   // color
   if (lhs->color != rhs->color) {
-    return false;
-  }
-  // total
-  if (lhs->total != rhs->total) {
     return false;
   }
   return true;
@@ -286,8 +272,6 @@ person_msgs__srv__Query_Response__copy(
   }
   // color
   output->color = input->color;
-  // total
-  output->total = input->total;
   return true;
 }
 

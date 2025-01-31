@@ -34,12 +34,8 @@ cdr_serialize(
 {
   // Member: light
   cdr << ros_message.light;
-  // Member: value
-  cdr << ros_message.value;
   // Member: color
   cdr << ros_message.color;
-  // Member: total
-  cdr << ros_message.total;
   return true;
 }
 
@@ -52,14 +48,8 @@ cdr_deserialize(
   // Member: light
   cdr >> ros_message.light;
 
-  // Member: value
-  cdr >> ros_message.value;
-
   // Member: color
   cdr >> ros_message.color;
-
-  // Member: total
-  cdr >> ros_message.total;
 
   return true;
 }
@@ -83,21 +73,9 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: value
-  {
-    size_t item_size = sizeof(ros_message.value);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // Member: color
   {
     size_t item_size = sizeof(ros_message.color);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: total
-  {
-    size_t item_size = sizeof(ros_message.total);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -127,21 +105,7 @@ max_serialized_size_Person(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: value
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   // Member: color
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: total
   {
     size_t array_size = 1;
 

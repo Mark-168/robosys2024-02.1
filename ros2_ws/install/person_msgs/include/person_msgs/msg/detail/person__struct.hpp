@@ -38,9 +38,7 @@ struct Person_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->light = 0;
-      this->value = 0;
       this->color = 0;
-      this->total = 0;
     }
   }
 
@@ -51,9 +49,7 @@ struct Person_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->light = 0;
-      this->value = 0;
       this->color = 0;
-      this->total = 0;
     }
   }
 
@@ -61,15 +57,9 @@ struct Person_
   using _light_type =
     uint8_t;
   _light_type light;
-  using _value_type =
-    uint8_t;
-  _value_type value;
   using _color_type =
     uint8_t;
   _color_type color;
-  using _total_type =
-    uint8_t;
-  _total_type total;
 
   // setters for named parameter idiom
   Type & set__light(
@@ -78,22 +68,10 @@ struct Person_
     this->light = _arg;
     return *this;
   }
-  Type & set__value(
-    const uint8_t & _arg)
-  {
-    this->value = _arg;
-    return *this;
-  }
   Type & set__color(
     const uint8_t & _arg)
   {
     this->color = _arg;
-    return *this;
-  }
-  Type & set__total(
-    const uint8_t & _arg)
-  {
-    this->total = _arg;
     return *this;
   }
 
@@ -142,13 +120,7 @@ struct Person_
     if (this->light != other.light) {
       return false;
     }
-    if (this->value != other.value) {
-      return false;
-    }
     if (this->color != other.color) {
-      return false;
-    }
-    if (this->total != other.total) {
       return false;
     }
     return true;
